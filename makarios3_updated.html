@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakariOS 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #002080;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #0055ff;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        footer {
+            background-color: #002080;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to MakariOS 3</h1>
+        <p>The project aims to the worst teacher in the school that does not know how to teach correctly.</p>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('announcements')">Announcements</a>
+        <a href="#" onclick="showSection('manage')">Manage Website</a>
+    </nav>
+    <div class="container">
+        <div id="announcements" class="section active">
+            <h2>Latest Announcements</h2>
+            <ul>
+                <li><strong>V0.1:</strong> New features added! We had a speaker bug that prevented loud sound. This will be fixed by tomorrow.</li>
+            </ul>
+        </div>
+        <div id="manage" class="section">
+            <h2>Manage Website</h2>
+            <img src="3b4d57cdbfb39425c70aa9775933018f.jpg" alt="Manage Image" style="max-width: 100%; height: auto;">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 MakariOS 3 Team</p>
+    </footer>
+</body>
+</html>
